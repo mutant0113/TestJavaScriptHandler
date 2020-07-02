@@ -3,5 +3,12 @@
     <body>
 	<h1>Hello World</h1>
 	<p>Github pages.</p>
+<script>
+           window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
+             window.flutter_inappwebview.callHandler('linkToWebpage', 'https://www.google.com/').then(function(result) {
+               console.log(result);
+             });
+           });
+        </script>
     </body>
 </html>
