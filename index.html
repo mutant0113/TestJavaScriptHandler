@@ -1,14 +1,27 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <body>
-	<h1>Hello World</h1>
-	<p>Github pages.</p>
-<script>
-           window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
-             window.flutter_inappwebview.callHandler('linkToWebpage', 'https://www.google.com/').then(function(result) {
-               console.log(result);
-             });
-           });
-        </script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hellow World</title>
+    <style>
+        div {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div>click</div>
+    <script>
+        window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
+            console.log("ready");
+
+            var div = document.body.querySelector('div');
+            div.addEventListener('click', function() {
+                window.flutter_inappwebview.callHandler('linkToWebpage', 'https://www.google.com');
+            });
+        });
+    </script>
+</body>
 </html>
