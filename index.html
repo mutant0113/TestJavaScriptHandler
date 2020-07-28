@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-    <div>來去逛逛</div>
+    <div>立即逛逛</div>
     <a href="https://www.google.com/">Visit Google.com!</a>
     <script>
         window.addEventListener("flutterInAppWebViewPlatformReady", function(event) {
@@ -20,7 +20,7 @@
 
             var div = document.body.querySelector('div');
             div.addEventListener('click', function() {
-                window.flutter_inappwebview.callHandler('linkToWebpage', 'https://www.google.com');
+                window.flutter_inappwebview.callHandler('navigateToUrl', 'https://www.google.com');
             });
         });
     </script>
