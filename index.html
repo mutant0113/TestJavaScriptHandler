@@ -25,6 +25,20 @@
         });
     </script>
     
+    <button onclick="locationAhrefWithRelativeUrl()">Location.ahref = login?ref=https://buy.line-beta.me/event/lineshopping/shopping_reg</button>
+    
+    <button onclick="locationAhrefWithAbsoluteUrl()">Location.ahref = https://buy.line-beta.me/login?ref=https://buy.line-beta.me/event/lineshopping/shopping_reg</button>
+
+    <script>
+    function locationAhrefWithRelativeUrl() {
+      location.href = "login?ref=https://buy.line-beta.me/event/lineshopping/shopping_reg";
+    }
+        
+    function locationAhrefWithAbsoluteUrl() {
+      location.href = "https://buy.line-beta.me/login?ref=https://buy.line-beta.me/event/lineshopping/shopping_reg";
+    }   
+    </script>
+    
     <a href='https://buy.line-beta.me/login?ref=https://buy.line-beta.me/event/lineshopping/shopping_reg'>訂單記錄<br/>
     </a><br/>
 </body>
